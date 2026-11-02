@@ -1,6 +1,6 @@
 # Claude Code Hook: Auto-format After Every Edit
 
-The hook from my Short *"Claude Code Hooks: The Feature Most Devs Skip"*.
+The hook from my Short *"Claude Code Hooks: The Feature Most Devs Skip"* ([YouTube](https://youtube.com/shorts/b6acJkc16jw) · [Instagram](https://www.instagram.com/reel/De4FRxUkn8v/)).
 
 Telling Claude "always run the linter" doesn't stick. A hook does. This one runs **Laravel Pint** (PHP) or **Prettier** (JS/TS) on a file right after Claude edits it, so formatting just happens.
 
