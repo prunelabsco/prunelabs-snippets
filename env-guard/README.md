@@ -90,6 +90,15 @@ echo '{"tool_input":{"file_path":"/app/.env.example"}}' | bash ~/.claude/hooks/e
 
 What I tested this way: `.env`, `.env.local`, `.env.production` blocked; `.env.example`, `.env.sample`, `config/app.php`, `environment.ts`, an empty path and invalid JSON all pass through.
 
+## Tested live
+
+Claude Code 2.1.322 on macOS, hook installed exactly as above. I asked Claude to add `MAIL_FROM=hello@example.com` to both `.env` and `.env.example` with the Edit tool:
+
+- `.env`: blocked, file unchanged (same checksum before and after). Claude reported:
+  `PreToolUse:Edit hook error: [bash ~/.claude/hooks/env-guard.sh]: Blocked: .env is off-limits. Tell the user which variable to change instead of editing it.`
+  Then it told me which line to add myself.
+- `.env.example`: edited normally.
+
 ## Notes
 
 - It only guards Claude's `Write`, `Edit` and `MultiEdit` tools. A Bash command like `echo "KEY=x" >> .env` is not caught.
