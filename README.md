@@ -9,6 +9,7 @@ Each folder has its own README with setup steps.
 | Snippet | What it does | Video |
 |---|---|---|
 | [auto-format](auto-format/) | Claude Code hook that runs Laravel Pint (PHP) or Prettier (JS/TS) after every file edit | Claude Code Hooks: The Feature Most Devs Skip ([YouTube](https://youtube.com/shorts/b6acJkc16jw) · [Instagram](https://www.instagram.com/reel/De4FRxUkn8v/)) |
+| [env-guard](env-guard/) | Claude Code hook that blocks edits to `.env` files (`.env.example` stays editable) | Follow-up to the Hooks video above |
 
 ---
 
